@@ -1,0 +1,850 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Haul</title>
+
+    <!-- font -->
+    <link rel="stylesheet" href="./assets/font/sebenta/stylesheet.css">
+    <link rel="stylesheet" href="./assets/font/stylesheet.css">
+    <!-- googlefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- nice select -->
+    <link rel="stylesheet" href="./assets/js/nice-select/nice-select2.css">
+    <!-- nouislider -->
+    <link rel="stylesheet" href="./assets/js/nouislider/nouislider.min.css">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <!-- style -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- responsive -->
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
+</head>
+
+<body>
+    <div class="offcanvas offcanvas-end quote-sidebar bg-gray-10 align-items-start" tabindex="-1" id="offcanvasQuote">
+        <div class="offcanvas-header justify-content-between w-100">
+            <a href="#" class="btn btn-link btn-prev text-black-500 fw-medium text-decoration-underline px-0">BACK</a>
+            <button type="button" class="btn btn-link text-black-500 fw-medium text-decoration-underline px-0"  data-bs-dismiss="offcanvas">CLOSE</button>
+            
+        </div>
+        <div class="offcanvas-body">
+            <div class="step-form h-100">
+                <div class="step-form-item step-1 -active">
+                    <div class="step-form-inner">
+                        <div class="d-flex mb-43">
+                            <button class="btn btn-black-500 fw-medium rounded-5px"> Request for License</button>
+                        </div>
+                        <div class="dots d-flex column-gap-7 mb-26">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <div class="mb-35">
+                            <div class="text-black-500 fw-bold fs-4 mb-13">
+                                Music License Request Form
+                            </div>
+                            <p class="text-black-500 fs-14 lh-23 mb-0">
+                                Fill out the form below to get a quote for the requested license. We will get back to you within hours.
+                            </p>
+                        </div>
+                        <div class="mb-30">
+                            <div class="text-black-500 fs-18 fw-semibold mb-15">
+                                Select Licence Use*
+                            </div>
+                            <div class="d-flex flex-wrap gap-7">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="licence" id="Web">
+                                    <label class="form-check-label" for="Web">
+                                        Web
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="licence" id="tv">
+                                    <label class="form-check-label" for="tv">
+                                        TV
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="licence" id="radio">
+                                    <label class="form-check-label" for="radio">
+                                        Radio
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="licence" id="film" checked>
+                                    <label class="form-check-label" for="film">
+                                        Film
+                                    </label>
+                                </div>
+                                <div class="w-100"></div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="licence" id="video">
+                                    <label class="form-check-label" for="video">
+                                        Video Game
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="licence" id="events">
+                                    <label class="form-check-label" for="events">
+                                        Events
+                                    </label>
+                                </div>
+
+                            </div>
+                            
+
+                        </div>
+
+                        <div class="mb-30">
+                            <div class="text-black-500 fs-18 fw-semibold mb-15">
+                                Select Duration*
+                            </div>
+                            <div class="d-flex flex-wrap gap-7">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="duration" id="15">
+                                    <label class="form-check-label" for="15">
+                                        15”
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="duration" id="30">
+                                    <label class="form-check-label" for="30">
+                                        30”
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="duration" id="1">
+                                    <label class="form-check-label" for="1">
+                                        1'
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="duration" id="full-track" checked>
+                                    <label class="form-check-label" for="full-track">
+                                        Full Track
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="mb-30">
+                            <div class="text-black-500 fs-18 fw-semibold mb-15">
+                                License Period*
+                            </div>
+                            <div class="d-flex flex-wrap gap-7">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="period" id="3months">
+                                    <label class="form-check-label" for="3months">
+                                        3 Months
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="period" id="6months">
+                                    <label class="form-check-label" for="6months">
+                                        6 Months
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="period" id="1year">
+                                    <label class="form-check-label" for="1year">
+                                        1 Year*
+                                    </label>
+                                </div>
+                               
+                            </div>
+                        </div>
+    
+                    </div> 
+                </div>  
+                <div class="step-form-item step-2">
+                    <div class="step-form-inner">
+                        <div class="d-flex mb-43">
+                            <button class="btn btn-black-500 fw-medium rounded-5px"> Request for License</button>
+                        </div>
+                        <div class="dots d-flex column-gap-7 mb-26">
+                            <span class="dot"></span>
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <div class="mb-35">
+                            <div class="text-black-500 fw-bold fs-4 mb-13">
+                                Music License Request Form
+                            </div>
+                            <p class="text-black-500 fs-14 lh-23 mb-0">
+                                Fill out the form below to get a quote for the requested license. We will get back to you within hours.
+                            </p>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="" class="text-black-500 fs-18 fw-semibold mb-15">Country</label>                            
+                            <input type="text" class="form-control rounded-0 bg-gray-20 rounded-5px py-14 text-black-500" placeholder="Company Name" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="text-black-500 fs-18 fw-semibold mb-15">Continent</label>                            
+                            <input type="text" class="form-control rounded-0 bg-gray-20 rounded-5px py-14 text-black-500" placeholder="Company Name" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="text-black-500 fs-18 fw-semibold mb-15">Worldwide</label>                            
+                            <input type="text" class="form-control rounded-0 bg-gray-20 rounded-5px py-14 text-black-500" placeholder="Company Name" />
+                        </div>
+    
+                    </div> 
+                </div> 
+                <div class="step-form-item step-3">
+                    <div class="step-form-inner">
+                        <div class="d-flex mb-43">
+                            <button class="btn btn-black-500 fw-medium rounded-5px"> Request for License</button>
+                        </div>
+                        <div class="dots d-flex column-gap-7 mb-26">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <div class="mb-32">
+                            <div class="text-black-500 fw-bold fs-4 mb-13">
+                                For Audio License Request Form
+                            </div>
+                            <p class="text-black-500 fs-14 lh-23 mb-0">
+                                Liked what you heard? Complete the form below to request a license for this audio track. Our team will assist you in securing the rights to use this sound in your upcoming campaign.
+                            </p>
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="text" class="form-control rounded-0 bg-gray-20 rounded-5px py-14 text-black-500" placeholder="Company Name" />
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control rounded-0 bg-gray-20 rounded-5px py-14 text-black-500" placeholder="Project Name" />
+                        </div>
+                        <div class="mb-3 validate">
+                            <input type="text" class="form-control rounded-0 bg-gray-20 rounded-5px py-14 text-black-500" placeholder="Contact Name*" />
+                        </div>
+                        <div class="mb-3 validate">
+                            <input type="email" class="form-control rounded-0 bg-gray-20 rounded-5px py-14 text-black-500" placeholder="Email Address**" />
+                        </div>
+                        <ul class="error-list list-unstyled ms-2 fw-medium text-danger">
+                            
+                        </ul>
+    
+                    </div> 
+                </div>  
+                <div class="step-form-item step-4">
+                    <div class="step-form-inner">
+                        <div class="d-flex mb-43 invisible">
+                            <button class="btn btn-black-500 fw-medium rounded-5px"> Request for License</button>
+                            <button type="button" class="btn btn-link text-black-500 fw-medium">I Need Custom Music</button>
+                        </div>
+                        <div class="dots d-flex column-gap-7 mb-26">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot active"></span>
+                        </div>
+                        <div class="mb-32">
+                            <div class="text-black-500 fw-bold fs-4 mb-13">
+                                For Audio License Request Form
+                            </div>
+                            <p class="text-black-500 fs-14 lh-23 mb-0">
+                                Liked what you heard? Complete the form below to request a license for this audio track. Our team will assist you in securing the rights to use this sound in your upcoming campaign.
+                            </p>
+                        </div>
+                        <div class="mb-4">
+                            <textarea class="form-control rounded-0 bg-gray-20 rounded-5px py-14 border-gray-30 text-black-500" placeholder="Please tell us more..."
+                            rows="6"></textarea>
+                        </div>
+                        <div class="mb-2 text-black-500">
+                            <ul class="list-unstyled request-list">
+                                <li class="mb-6 d-flex align-items-center">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" name="request" id="item1"/>
+                                        <label class="form-check-label bg-transparent px-0 d-flex" for="item1">  
+                                            <div class="me-9 list-icon"></div>
+                                            Request similar tracks playlist
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="mb-6 d-flex align-items-center">
+                                    
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" name="request" id="item2"/>
+                                        <label class="form-check-label bg-transparent px-0 d-flex" for="item2">  
+                                            <div class="me-9 list-icon"></div>
+                                            Request monthly / yearly subscription
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="mb-6 d-flex align-items-center">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" name="request" id="item3" />
+                                        <label class="form-check-label bg-transparent px-0 d-flex" for="item3"> 
+                                            <div class="me-9 list-icon"></div>   
+                                        Subscribe HAUL’s newsletter</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>             
+                </div>  
+                <div class="step-form-item step-5">
+                    <div class="step-form-inner my-auto">
+                        <img src="./assets/images/icon-success.svg" alt="" class="mb-30">
+                        <div class="mb-32">
+                            <div class="text-black-500 fw-bold fs-4">
+                                You’re All Set!
+                            </div>
+                            <p class="text-black-500 fs-14 lh-23 mb-0">
+                                Thanks for getting in touch! We've got your request and our team will check it out soon. Keep an eye on your inbox for a confirmation email with more details. If you need anything else, feel free to reach out!
+                            </p>
+                        </div>
+                    </div>                     
+                </div>  
+                
+            </div>
+        </div>
+        <button class="btn btn-next fs-18 fw-semibold rounded-5px mt-3 mb-4 me-30 ms-auto text-uppercase">NEXT</button>     
+    </div>
+
+    <!-- header start -->
+    <header class="header position-sticky top-0 bg-black-50 z-10">
+        <div class="container-xxl px-xxl-56 py-3">
+            <div class="d-flex flex-wrap gap-2 gap-lg-3 justify-content-between align-items-center">
+                <div class="logo">
+                    <a href="/"><img src="./assets/images/logo.svg" alt=""></a>
+                </div>
+                <div class="user-actions d-flex gap-2 gap-md-3 gap-lg-4">     
+                    <a href="mailto:hello@haul-agency.com" class="text-danger fw-semibold py-15 border-0">SUBSCRIPTION</a>           
+                    <a href="mailto:info@haul-agency.com" class="text-white fw-semibold py-15 border-0" role="button">GET A QUOTE</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- playlist start -->
+    <section class="playlist my-4 my-lg-32">
+        <div class="container-xxl px-xxl-56">
+            <div class="">
+                <h1 class="font-america mb-0 fw-bold mb-4 mb-lg-41 text-white fs-lg-72">
+                    MUSIC LIBRARY <br>
+                    LICENSE EXCLUSIVE MUSIC TODAY
+                </h1>
+                <div class="row gx-xl-100">
+                    <div class="col-lg-4">
+                        <p class="font-helvetica fs-lg-20 text-uppercase lh-lg-30">
+                            Get a <span class="text-decoration-underline">Personalized Quote</span> in 3 hours or take advantage of our flexible <span class="text-decoration-underline"> Annual/Monthly subscriptions</span> 
+                        </p>
+                    </div>
+                    <div class="col-lg-8">
+                        <p class="font-helvetica fs-lg-20 lh-lg-30">
+                            Complete your audience experience and license original contemporary music exclusively for your project from our easy-to-use library. Select from compositions produced by industry experts according to tone, tempo or mood and ensure your work syncs with today’s cultural and marketing trends. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- playlist end -->
+
+    <!-- filter start -->
+    <section class="filter mt-3">
+        <div class="container-xxl px-xxl-56">
+            <div class="d-lg-none">
+                <button class="btn btn-black-200 fs-14 fw-semibold py-10 w-100 show-filter">Add Filter</button>
+            </div>
+            <div class="filter-inner border-top border-black-100 accordion" id="filterAcc">
+                <div class="d-flex d-md-none align-items-center justify-content-between text-white">
+                    <h4 class="mb-0">Add Filter</h4>
+                    <div data-bs-theme="dark">
+                        <button class="btn-close shadow-none close-filter"></button>
+                    </div>
+                    
+                </div>
+                <div class="d-flex flex-wrap justify-content-between py-2 mb-1">
+                    <ul class="filter-items mb-0 list-unstyled d-flex align-items-center column-gap-4">
+                        <li class="d-none d-lg-block">
+                            <button class="btn btn-link py-10 px-0 open-filter">
+                                <span></span>
+                            </button>
+                        </li>
+                        <li><button class="btn btn-link py-10 px-0" data-bs-toggle="collapse" data-bs-target="#genres">Genres</button></li>
+                        <li><button class="btn btn-link py-10 px-0" data-bs-toggle="collapse" data-bs-target="#moods">Moods</button></li>
+                        <li><button class="btn btn-link py-10 px-0" data-bs-toggle="collapse" data-bs-target="#vocals">Vocals</button></li>
+                        <li><button class="btn btn-link py-10 px-0" data-bs-toggle="collapse" data-bs-target="#duration">Duration</button></li>
+                        <li><button class="btn btn-link py-10 px-0" data-bs-toggle="collapse" data-bs-target="#bpm" >BPM</button></li>
+                    </ul>
+
+                    <div class="d-none d-lg-block">
+                        <select class="select2">
+                            <option value="recommended" selected>Suggested order</option>
+                            <option value="desc">Newest</option>
+                            <option value="asc">A-Z</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="collapse" id="genres" data-bs-parent="#filterAcc">
+                    <ul class="d-flex flex-wrap mb-0 list-unstyled gap-1">
+                        <li>
+                            <button class="btn btn-black-200 fs-14 fw-semibold py-10 px-13" data-filter="Alternative Rock">
+                                <span>Alternative Rock</span>
+                                <span class="count">2</span>
+                            </button>
+                        </li>
+                        <li><button class="btn btn-black-200 fs-14 fw-semibold py-10 px-13" data-filter="Beats"><span>Beats</span><span class="count">2</span></button></li>
+                        <li><button class="btn btn-black-200 fs-14 fw-semibold py-10 px-13" data-filter="Boom Bap"><span>Boom Bap</span><span class="count">2</span></button></li>
+                        <li><button class="btn btn-black-200 fs-14 fw-semibold py-10 px-13" data-filter="Acoustic"><span>Acoustic</span><span class="count">1</span></button></li>
+                        <li><button class="btn btn-black-200 fs-14 fw-semibold py-10 px-13" data-filter="Alternative Hip Hop"><span>Alternative Hip Hop</span><span class="count">1</span></button></li>
+                        <li><button class="btn btn-black-200 fs-14 fw-semibold py-10 px-13" data-filter="Alternative Pop"><span>Alternative Pop</span><span class="count">1</span></button></li>
+                        <li><button class="btn btn-black-200 fs-14 fw-semibold py-10 px-13" data-filter="Ambient"><span>Ambient</span><span class="count">1</span></button></li>
+                        <li><button class="btn btn-black-200 fs-14 fw-semibold py-10 px-13" data-filter="Contemporary Folk"><span>Contemporary Folk</span><span class="count">1</span></button></li>
+                        <li><button class="btn btn-black-200 fs-14 fw-semibold py-10 px-13" data-filter="Hip Hop"><span>Hip Hop</span><span class="count">1</span></button></li>
+                        <li><button class="btn btn-black-200 fs-14 fw-semibold py-10 px-13" data-filter="Indie Pop"><span>Indie Pop</span><span class="count">1</span></button></li>
+                        <li><button class="btn btn-black-200 fs-14 fw-semibold py-10 px-13" data-filter="Lo-fi Hip Hop"><span>Lo-fi Hip Hop</span><span class="count">1</span></button></li>
+                        <li><button class="btn btn-black-200 fs-14 fw-semibold py-10 px-13" data-filter="Pop Rock"><span>Pop Rock</span><span class="count">1</span></button></li>
+                        <li><button class="btn btn-black-200 fs-14 fw-semibold py-10 px-13" data-filter="Solo Guitar"><span>Solo Guitar</span><span class="count">1</span></button></li>
+                    </ul>
+                    <div class="selected-filters"></div>
+                </div>
+                <div class="collapse" id="moods" data-bs-parent="#filterAcc">
+                    <ul class="d-flex flex-wrap mb-0 list-unstyled gap-1">
+                        <li><button class="btn btn-black-200 fs-14 fw-semibold py-10 px-13" data-filter="Laid Back"><span>Laid Back</span><span class="count">6</span></button></li>
+                        <li><button class="btn btn-black-200 fs-14 fw-semibold py-10 px-13" data-filter="Dreamy"><span>Dreamy</span><span class="count">5</span></button></li>
+                        <li><button class="btn btn-black-200 fs-14 fw-semibold py-10 px-13" data-filter="Hopeful"><span>Hopeful</span><span class="count">5</span></button></li>
+                        <li><button class="btn btn-black-200 fs-14 fw-semibold py-10 px-13" data-filter="Happy"><span>Happy</span><span class="count">2</span></button></li>
+                        <li><button class="btn btn-black-200 fs-14 fw-semibold py-10 px-13" data-filter="Restless"><span>Restless</span><span class="count">1</span></button></li>
+                        <li><button class="btn btn-black-200 fs-14 fw-semibold py-10 px-13" data-filter="Sentimental"><span>Sentimental</span><span class="count">1</span></button></li>
+                    </ul>
+                    <div class="selected-filters"></div>
+                </div>
+                <div class="collapse" id="vocals" data-bs-parent="#filterAcc">
+                    <ul class="d-flex flex-wrap mb-0 list-unstyled gap-1">
+                        <li><button class="btn btn-black-200 fs-14 fw-semibold py-10 px-13" data-filter="Vocals"><span>Vocals</span><span class="count">4</span></button></li>
+                        <li><button class="btn btn-black-200 fs-14 fw-semibold py-10 px-13" data-filter="Instrumentals"><span>Instrumentals</span><span class="count">5</span></button></li>
+                    </ul>
+                    <div class="selected-filters"></div>
+                </div>
+                <div class="collapse" id="duration" data-bs-parent="#filterAcc">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div id="duration-range"></div>
+                        </div>
+                    </div>
+                    <div class="selected-filters"></div>
+                </div>
+                <div class="collapse " id="bpm" data-bs-parent="#filterAcc">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div id="bpm-range"></div>
+                        </div>
+                    </div>
+                    <div class="selected-filters"></div>
+                </div>
+                <div class="d-flex d-md-none column-gap-4 mt-4">
+                    <button class="btn btn-black-200 fs-14 fw-semibold py-10 px-15 w-50 remove-filters-mobile">Clear all</button>
+                    <button class="btn btn-light fs-14 fw-semibold py-10 px-15 w-50">Apply</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- filter end -->
+
+    <!-- tracklist start -->
+    <section class="tracklist">
+        <div class="container-xxl px-xxl-56">
+            <div class="track-item text-gray-100" data-track="../assets/media/dreaming.mp3">
+                <div class="d-flex align-items-center column-gap-lg-3">
+                    <div class="btn-action" role="button">
+                        <div class="btn-play bg-gray-900" data-action="play">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M20 12L8 5V19L20 12Z"></path></svg>
+                        </div>
+                        <div class="btn-pause bg-white" data-action="pause">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 5H7V19H10V5ZM17 5H14V19H17V5Z"></path></svg>
+                        </div>
+                        <img src="./assets/images/track-cover-1.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="track-info d-grid">
+                        <a href="#" class="title fs-14 fw-semibold text-truncate text-gray-100">Rich People Dreaming</a>
+                        <div class="desc fs-12 text-truncate">
+                            <span>Siine Superintendent McCupcakes</span>
+                        </div>
+                    </div>
+                    <div class="track-case d-flex ms-auto">
+                        <button class="btn p-0 text-gray-50" data-bs-toggle="tooltip" data-bs-title="Explicit">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M4 2C2.89543 2 2 2.89543 2 4V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20V4C22 2.89543 21.1046 2 20 2H4ZM14.9265 16H9.21626V7.27273H14.8924V8.59801H10.7972V10.9673H14.5984V12.2926H10.7972V14.6747H14.9265V16Z"></path></svg>
+                        </button>
+                        <button class="btn p-0 text-gray-50" data-bs-toggle="tooltip" data-bs-title="Has vocals">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.3431 4 9 5.34315 9 7V11C9 12.6569 10.3431 14 12 14C13.6569 14 15 12.6569 15 11V7C15 5.34315 13.6569 4 12 4ZM11 16.917V19H8V21H16V19H13V16.917C15.8377 16.441 18 13.973 18 11H16C16 13.2091 14.2091 15 12 15C9.79086 15 8 13.2091 8 11H6C6 13.973 8.16229 16.441 11 16.917Z"></path></svg>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="d-none d-md-flex align-items-center column-gap-3">
+                    <div class="waveform flex-grow-1"></div>
+                    <button class="btn btn-tooltip" data-bs-toggle="tooltip" data-bs-title="Find similar">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 3H3v18h5v2H1V1h7v2Zm13 0h-5V1h7v22h-7v-2h5V3Zm-10.55 7.72-1.25 3a1.33 1.33 0 0 1-2.42.08L5.38 11H4V9h1.8c.5 0 .96.29 1.19.74l.93 1.86 1.33-3.2a1.33 1.33 0 0 1 2.48.04l1.82 4.84 1.23-2.96a1.33 1.33 0 0 1 2.45-.04L18.48 13H20v2h-1.95c-.52 0-1-.3-1.21-.78l-.8-1.72-1.3 3.1a1.33 1.33 0 0 1-2.47-.04l-1.82-4.84Z"></path></svg>
+                    </button>
+                </div>
+                <div class="d-none d-sm-flex flex-column justify-content-center fs-12">
+                    <span>2:37</span>
+                    <span>132 BPM</span>
+                </div>
+                <div class="d-none d-lg-flex flex-column justify-content-center fs-12 text-truncate">
+                    <a href="#" class="text-gray-100 text-truncate">Alternative Rock</a>
+                    <div class="d-flex flex-row text-truncate column-gap-1">
+                        <a href="#" class="text-gray-100">Dreamy,</a>
+                        <a href="#" class="text-gray-100 text-truncate">Laid Back</a>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-end">
+                    <button class="btn btn-link text-gray-100 fs-14" data-bs-toggle="offcanvas" data-bs-target="#offcanvasQuote">
+                        GET A QUOTE
+                    </button>
+                    <button class="btn btn-tooltip" data-bs-toggle="tooltip" data-bs-title="Copy link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.9954 1.99658C16.3384 1.99658 15.688 2.12606 15.0811 2.37762C14.4745 2.62911 13.9233 2.99767 13.4592 3.46225L13.4588 3.46264L9.57079 7.35062C9.10603 7.81487 8.73733 8.36617 8.48577 8.97301C8.23422 9.57984 8.10474 10.2303 8.10474 10.8872C8.10474 11.5441 8.23422 12.1946 8.48577 12.8014C8.73733 13.4083 9.10603 13.9596 9.57079 14.4238L10.9842 13.0088C10.7054 12.7303 10.4842 12.3996 10.3333 12.0356C10.1824 11.6715 10.1047 11.2813 10.1047 10.8872C10.1047 10.4931 10.1824 10.1029 10.3333 9.73889C10.4842 9.37485 10.7054 9.04412 10.9842 8.76562L10.9846 8.76523L14.8734 4.87646L14.8738 4.87607C15.1523 4.59726 15.483 4.37607 15.847 4.22517C16.2111 4.07426 16.6013 3.99658 16.9954 3.99658C17.3894 3.99658 17.7796 4.07426 18.1437 4.22517C18.5077 4.37607 18.8385 4.59726 19.117 4.87607L19.8245 4.16935L19.1177 4.87686C19.3965 5.15536 19.6177 5.48608 19.7686 5.85012C19.9195 6.21416 19.9972 6.60438 19.9972 6.99846C19.9972 7.39254 19.9195 7.78275 19.7686 8.14679C19.6179 8.51053 19.3969 8.84101 19.1184 9.11937L19.1177 9.12006L17.1698 11.058L18.5804 12.4759L20.5297 10.5365L20.5312 10.5351C20.9959 10.0708 21.3646 9.51951 21.6162 8.91267C21.8677 8.30584 21.9972 7.65537 21.9972 6.99846C21.9972 6.34155 21.8677 5.69108 21.6162 5.08424C21.3647 4.47758 20.9961 3.92642 20.5316 3.46225C20.0674 2.99767 19.5162 2.62911 18.9096 2.37762C18.3027 2.12606 17.6523 1.99658 16.9954 1.99658ZM15.508 11.1924C15.2565 10.5855 14.8878 10.0342 14.423 9.56997L13.0096 10.985C13.2884 11.2635 13.5096 11.5942 13.6605 11.9582C13.8114 12.3223 13.8891 12.7125 13.8891 13.1066C13.8891 13.5007 13.8114 13.8909 13.6605 14.2549C13.5096 14.619 13.2884 14.9497 13.0096 15.2282L13.0092 15.2286L9.12043 19.1173L9.12004 19.1177C8.84154 19.3965 8.51082 19.6177 8.14678 19.7686C7.78274 19.9195 7.39252 19.9972 6.99845 19.9972C6.60437 19.9972 6.21416 19.9195 5.85012 19.7686C5.48608 19.6177 5.15535 19.3965 4.87685 19.1177L4.16935 19.8244L4.87607 19.1169C4.59726 18.8384 4.37607 18.5077 4.22517 18.1437C4.07426 17.7796 3.99658 17.3894 3.99658 16.9953C3.99658 16.6013 4.07426 16.211 4.22517 15.847C4.37596 15.4832 4.59693 15.1527 4.87545 14.8744L4.87607 14.8737L6.82402 12.9358L5.41344 11.5179L3.46406 13.4573L3.46264 13.4587C2.99788 13.923 2.62918 14.4743 2.37762 15.0811C2.12606 15.688 1.99658 16.3384 1.99658 16.9953C1.99658 17.6523 2.12606 18.3027 2.37762 18.9096C2.6291 19.5162 2.99767 20.0674 3.46225 20.5315C3.92641 20.9961 4.47757 21.3647 5.08424 21.6162C5.69107 21.8677 6.34154 21.9972 6.99845 21.9972C7.65536 21.9972 8.30583 21.8677 8.91266 21.6162C9.51932 21.3647 10.0705 20.9961 10.5346 20.5315L10.535 20.5312L14.423 16.6432V9.56997L14.4234 16.6428C14.888 16.1786 15.2565 15.6275 15.508 15.0208C15.7596 14.414 15.8891 13.7635 15.8891 13.1066C15.8891 12.4497 15.7596 11.7992 15.508 11.1924Z"></path></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="track-item text-gray-100" data-track="../assets/media/beach.mp3">
+                <div class="d-flex align-items-center column-gap-lg-3">
+                    <div class="btn-action" role="button">
+                        <div class="btn-play bg-gray-900" data-action="play">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M20 12L8 5V19L20 12Z"></path></svg>
+                        </div>
+                        <div class="btn-pause bg-white" data-action="pause">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 5H7V19H10V5ZM17 5H14V19H17V5Z"></path></svg>
+                        </div>
+                        <img src="./assets/images/track-cover-2.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="track-info d-grid">
+                        <a href="#" class="title fs-14 fw-semibold text-truncate text-gray-100">Sun Ray Beach</a>
+                        <div class="desc fs-12 text-truncate">
+                            <span>Dew Of Light</span>
+                        </div>
+                    </div>
+                    <div class="track-case d-flex ms-auto">
+                    </div>
+
+                </div>
+                <div class="d-none d-md-flex align-items-center column-gap-3">
+                    <div class="waveform flex-grow-1"></div>
+                    <button class="btn btn-tooltip" data-bs-toggle="tooltip" data-bs-title="Find similar">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 3H3v18h5v2H1V1h7v2Zm13 0h-5V1h7v22h-7v-2h5V3Zm-10.55 7.72-1.25 3a1.33 1.33 0 0 1-2.42.08L5.38 11H4V9h1.8c.5 0 .96.29 1.19.74l.93 1.86 1.33-3.2a1.33 1.33 0 0 1 2.48.04l1.82 4.84 1.23-2.96a1.33 1.33 0 0 1 2.45-.04L18.48 13H20v2h-1.95c-.52 0-1-.3-1.21-.78l-.8-1.72-1.3 3.1a1.33 1.33 0 0 1-2.47-.04l-1.82-4.84Z"></path></svg>
+                    </button>
+                </div>
+                <div class="d-none d-sm-flex flex-column justify-content-center fs-12">
+                    <span>2:37</span>
+                    <span>132 BPM</span>
+                </div>
+                <div class="d-none d-lg-flex flex-column justify-content-center fs-12 text-truncate">
+                    <a href="#" class="text-gray-100 text-truncate">Alternative Rock</a>
+                    <div class="d-flex flex-row text-truncate column-gap-1">
+                        <a href="#" class="text-gray-100">Dreamy,</a>
+                        <a href="#" class="text-gray-100 text-truncate">Laid Back</a>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-end">
+                    <button class="btn btn-link text-gray-100 fs-14" data-bs-toggle="offcanvas" data-bs-target="#offcanvasQuote">
+                        GET A QUOTE
+                    </button>
+                    <button class="btn btn-tooltip" data-bs-toggle="tooltip" data-bs-title="Copy link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.9954 1.99658C16.3384 1.99658 15.688 2.12606 15.0811 2.37762C14.4745 2.62911 13.9233 2.99767 13.4592 3.46225L13.4588 3.46264L9.57079 7.35062C9.10603 7.81487 8.73733 8.36617 8.48577 8.97301C8.23422 9.57984 8.10474 10.2303 8.10474 10.8872C8.10474 11.5441 8.23422 12.1946 8.48577 12.8014C8.73733 13.4083 9.10603 13.9596 9.57079 14.4238L10.9842 13.0088C10.7054 12.7303 10.4842 12.3996 10.3333 12.0356C10.1824 11.6715 10.1047 11.2813 10.1047 10.8872C10.1047 10.4931 10.1824 10.1029 10.3333 9.73889C10.4842 9.37485 10.7054 9.04412 10.9842 8.76562L10.9846 8.76523L14.8734 4.87646L14.8738 4.87607C15.1523 4.59726 15.483 4.37607 15.847 4.22517C16.2111 4.07426 16.6013 3.99658 16.9954 3.99658C17.3894 3.99658 17.7796 4.07426 18.1437 4.22517C18.5077 4.37607 18.8385 4.59726 19.117 4.87607L19.8245 4.16935L19.1177 4.87686C19.3965 5.15536 19.6177 5.48608 19.7686 5.85012C19.9195 6.21416 19.9972 6.60438 19.9972 6.99846C19.9972 7.39254 19.9195 7.78275 19.7686 8.14679C19.6179 8.51053 19.3969 8.84101 19.1184 9.11937L19.1177 9.12006L17.1698 11.058L18.5804 12.4759L20.5297 10.5365L20.5312 10.5351C20.9959 10.0708 21.3646 9.51951 21.6162 8.91267C21.8677 8.30584 21.9972 7.65537 21.9972 6.99846C21.9972 6.34155 21.8677 5.69108 21.6162 5.08424C21.3647 4.47758 20.9961 3.92642 20.5316 3.46225C20.0674 2.99767 19.5162 2.62911 18.9096 2.37762C18.3027 2.12606 17.6523 1.99658 16.9954 1.99658ZM15.508 11.1924C15.2565 10.5855 14.8878 10.0342 14.423 9.56997L13.0096 10.985C13.2884 11.2635 13.5096 11.5942 13.6605 11.9582C13.8114 12.3223 13.8891 12.7125 13.8891 13.1066C13.8891 13.5007 13.8114 13.8909 13.6605 14.2549C13.5096 14.619 13.2884 14.9497 13.0096 15.2282L13.0092 15.2286L9.12043 19.1173L9.12004 19.1177C8.84154 19.3965 8.51082 19.6177 8.14678 19.7686C7.78274 19.9195 7.39252 19.9972 6.99845 19.9972C6.60437 19.9972 6.21416 19.9195 5.85012 19.7686C5.48608 19.6177 5.15535 19.3965 4.87685 19.1177L4.16935 19.8244L4.87607 19.1169C4.59726 18.8384 4.37607 18.5077 4.22517 18.1437C4.07426 17.7796 3.99658 17.3894 3.99658 16.9953C3.99658 16.6013 4.07426 16.211 4.22517 15.847C4.37596 15.4832 4.59693 15.1527 4.87545 14.8744L4.87607 14.8737L6.82402 12.9358L5.41344 11.5179L3.46406 13.4573L3.46264 13.4587C2.99788 13.923 2.62918 14.4743 2.37762 15.0811C2.12606 15.688 1.99658 16.3384 1.99658 16.9953C1.99658 17.6523 2.12606 18.3027 2.37762 18.9096C2.6291 19.5162 2.99767 20.0674 3.46225 20.5315C3.92641 20.9961 4.47757 21.3647 5.08424 21.6162C5.69107 21.8677 6.34154 21.9972 6.99845 21.9972C7.65536 21.9972 8.30583 21.8677 8.91266 21.6162C9.51932 21.3647 10.0705 20.9961 10.5346 20.5315L10.535 20.5312L14.423 16.6432V9.56997L14.4234 16.6428C14.888 16.1786 15.2565 15.6275 15.508 15.0208C15.7596 14.414 15.8891 13.7635 15.8891 13.1066C15.8891 12.4497 15.7596 11.7992 15.508 11.1924Z"></path></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="track-item text-gray-100" data-track="../assets/media/dancing.mp3">
+                <div class="d-flex align-items-center column-gap-lg-3">
+                    <div class="btn-action" role="button">
+                        <div class="btn-play bg-gray-900" data-action="play">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M20 12L8 5V19L20 12Z"></path></svg>
+                        </div>
+                        <div class="btn-pause bg-white" data-action="pause">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 5H7V19H10V5ZM17 5H14V19H17V5Z"></path></svg>
+                        </div>
+                        <img src="./assets/images/track-cover-3.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="track-info d-grid">
+                        <a href="#" class="title fs-14 fw-semibold text-truncate text-gray-100">Dancing with the Devil</a>
+                        <div class="desc fs-12 text-truncate">
+                            <span>Bonkers Beat Club</span>
+                        </div>
+                    </div>
+                    <div class="track-case d-flex ms-auto">
+                        <button class="btn p-0 text-gray-50" data-bs-toggle="tooltip" data-bs-title="Has vocals">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.3431 4 9 5.34315 9 7V11C9 12.6569 10.3431 14 12 14C13.6569 14 15 12.6569 15 11V7C15 5.34315 13.6569 4 12 4ZM11 16.917V19H8V21H16V19H13V16.917C15.8377 16.441 18 13.973 18 11H16C16 13.2091 14.2091 15 12 15C9.79086 15 8 13.2091 8 11H6C6 13.973 8.16229 16.441 11 16.917Z"></path></svg>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="d-none d-md-flex align-items-center column-gap-3">
+                    <div class="waveform flex-grow-1"></div>
+                    <button class="btn btn-tooltip" data-bs-toggle="tooltip" data-bs-title="Find similar">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 3H3v18h5v2H1V1h7v2Zm13 0h-5V1h7v22h-7v-2h5V3Zm-10.55 7.72-1.25 3a1.33 1.33 0 0 1-2.42.08L5.38 11H4V9h1.8c.5 0 .96.29 1.19.74l.93 1.86 1.33-3.2a1.33 1.33 0 0 1 2.48.04l1.82 4.84 1.23-2.96a1.33 1.33 0 0 1 2.45-.04L18.48 13H20v2h-1.95c-.52 0-1-.3-1.21-.78l-.8-1.72-1.3 3.1a1.33 1.33 0 0 1-2.47-.04l-1.82-4.84Z"></path></svg>
+                    </button>
+                </div>
+                <div class="d-none d-sm-flex flex-column justify-content-center fs-12">
+                    <span>3:18</span>
+                    <span>100 BPM</span>
+                </div>
+                <div class="d-none d-lg-flex flex-column justify-content-center fs-12 text-truncate">
+                    <!-- <a href="#" class="text-gray-100 text-truncate">Hip Hop</a> -->
+                    <div class="d-flex flex-row text-truncate column-gap-1">
+                        <a href="#" class="text-gray-100">Hip Hop,</a>
+                        <a href="#" class="text-gray-100 text-truncate">Boom Bap</a>
+                    </div>
+                    <div class="d-flex flex-row text-truncate column-gap-1">
+                        <a href="#" class="text-gray-100">Happy,</a>
+                        <a href="#" class="text-gray-100 text-truncate">Laid Back</a>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-end">
+                    <button class="btn btn-link text-gray-100 fs-14" data-bs-toggle="offcanvas" data-bs-target="#offcanvasQuote">
+                        GET A QUOTE
+                    </button>
+                    <button class="btn btn-tooltip" data-bs-toggle="tooltip" data-bs-title="Copy link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.9954 1.99658C16.3384 1.99658 15.688 2.12606 15.0811 2.37762C14.4745 2.62911 13.9233 2.99767 13.4592 3.46225L13.4588 3.46264L9.57079 7.35062C9.10603 7.81487 8.73733 8.36617 8.48577 8.97301C8.23422 9.57984 8.10474 10.2303 8.10474 10.8872C8.10474 11.5441 8.23422 12.1946 8.48577 12.8014C8.73733 13.4083 9.10603 13.9596 9.57079 14.4238L10.9842 13.0088C10.7054 12.7303 10.4842 12.3996 10.3333 12.0356C10.1824 11.6715 10.1047 11.2813 10.1047 10.8872C10.1047 10.4931 10.1824 10.1029 10.3333 9.73889C10.4842 9.37485 10.7054 9.04412 10.9842 8.76562L10.9846 8.76523L14.8734 4.87646L14.8738 4.87607C15.1523 4.59726 15.483 4.37607 15.847 4.22517C16.2111 4.07426 16.6013 3.99658 16.9954 3.99658C17.3894 3.99658 17.7796 4.07426 18.1437 4.22517C18.5077 4.37607 18.8385 4.59726 19.117 4.87607L19.8245 4.16935L19.1177 4.87686C19.3965 5.15536 19.6177 5.48608 19.7686 5.85012C19.9195 6.21416 19.9972 6.60438 19.9972 6.99846C19.9972 7.39254 19.9195 7.78275 19.7686 8.14679C19.6179 8.51053 19.3969 8.84101 19.1184 9.11937L19.1177 9.12006L17.1698 11.058L18.5804 12.4759L20.5297 10.5365L20.5312 10.5351C20.9959 10.0708 21.3646 9.51951 21.6162 8.91267C21.8677 8.30584 21.9972 7.65537 21.9972 6.99846C21.9972 6.34155 21.8677 5.69108 21.6162 5.08424C21.3647 4.47758 20.9961 3.92642 20.5316 3.46225C20.0674 2.99767 19.5162 2.62911 18.9096 2.37762C18.3027 2.12606 17.6523 1.99658 16.9954 1.99658ZM15.508 11.1924C15.2565 10.5855 14.8878 10.0342 14.423 9.56997L13.0096 10.985C13.2884 11.2635 13.5096 11.5942 13.6605 11.9582C13.8114 12.3223 13.8891 12.7125 13.8891 13.1066C13.8891 13.5007 13.8114 13.8909 13.6605 14.2549C13.5096 14.619 13.2884 14.9497 13.0096 15.2282L13.0092 15.2286L9.12043 19.1173L9.12004 19.1177C8.84154 19.3965 8.51082 19.6177 8.14678 19.7686C7.78274 19.9195 7.39252 19.9972 6.99845 19.9972C6.60437 19.9972 6.21416 19.9195 5.85012 19.7686C5.48608 19.6177 5.15535 19.3965 4.87685 19.1177L4.16935 19.8244L4.87607 19.1169C4.59726 18.8384 4.37607 18.5077 4.22517 18.1437C4.07426 17.7796 3.99658 17.3894 3.99658 16.9953C3.99658 16.6013 4.07426 16.211 4.22517 15.847C4.37596 15.4832 4.59693 15.1527 4.87545 14.8744L4.87607 14.8737L6.82402 12.9358L5.41344 11.5179L3.46406 13.4573L3.46264 13.4587C2.99788 13.923 2.62918 14.4743 2.37762 15.0811C2.12606 15.688 1.99658 16.3384 1.99658 16.9953C1.99658 17.6523 2.12606 18.3027 2.37762 18.9096C2.6291 19.5162 2.99767 20.0674 3.46225 20.5315C3.92641 20.9961 4.47757 21.3647 5.08424 21.6162C5.69107 21.8677 6.34154 21.9972 6.99845 21.9972C7.65536 21.9972 8.30583 21.8677 8.91266 21.6162C9.51932 21.3647 10.0705 20.9961 10.5346 20.5315L10.535 20.5312L14.423 16.6432V9.56997L14.4234 16.6428C14.888 16.1786 15.2565 15.6275 15.508 15.0208C15.7596 14.414 15.8891 13.7635 15.8891 13.1066C15.8891 12.4497 15.7596 11.7992 15.508 11.1924Z"></path></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="track-item text-gray-100" data-track="../assets/media/dancing.mp3">
+                <div class="d-flex align-items-center column-gap-lg-3">
+                    <div class="btn-action" role="button">
+                        <div class="btn-play bg-gray-900" data-action="play">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M20 12L8 5V19L20 12Z"></path></svg>
+                        </div>
+                        <div class="btn-pause bg-white" data-action="pause">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 5H7V19H10V5ZM17 5H14V19H17V5Z"></path></svg>
+                        </div>
+                        <img src="./assets/images/track-cover-3.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="track-info d-grid">
+                        <a href="#" class="title fs-14 fw-semibold text-truncate text-gray-100">Dancing with the Devil</a>
+                        <div class="desc fs-12 text-truncate">
+                            <span>Bonkers Beat Club</span>
+                        </div>
+                    </div>
+                    <div class="track-case d-flex ms-auto">
+                        <button class="btn p-0 text-gray-50" data-bs-toggle="tooltip" data-bs-title="Has vocals">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.3431 4 9 5.34315 9 7V11C9 12.6569 10.3431 14 12 14C13.6569 14 15 12.6569 15 11V7C15 5.34315 13.6569 4 12 4ZM11 16.917V19H8V21H16V19H13V16.917C15.8377 16.441 18 13.973 18 11H16C16 13.2091 14.2091 15 12 15C9.79086 15 8 13.2091 8 11H6C6 13.973 8.16229 16.441 11 16.917Z"></path></svg>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="d-none d-md-flex align-items-center column-gap-3">
+                    <div class="waveform flex-grow-1"></div>
+                    <button class="btn btn-tooltip" data-bs-toggle="tooltip" data-bs-title="Find similar">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 3H3v18h5v2H1V1h7v2Zm13 0h-5V1h7v22h-7v-2h5V3Zm-10.55 7.72-1.25 3a1.33 1.33 0 0 1-2.42.08L5.38 11H4V9h1.8c.5 0 .96.29 1.19.74l.93 1.86 1.33-3.2a1.33 1.33 0 0 1 2.48.04l1.82 4.84 1.23-2.96a1.33 1.33 0 0 1 2.45-.04L18.48 13H20v2h-1.95c-.52 0-1-.3-1.21-.78l-.8-1.72-1.3 3.1a1.33 1.33 0 0 1-2.47-.04l-1.82-4.84Z"></path></svg>
+                    </button>
+                </div>
+                <div class="d-none d-sm-flex flex-column justify-content-center fs-12">
+                    <span>3:18</span>
+                    <span>100 BPM</span>
+                </div>
+                <div class="d-none d-lg-flex flex-column justify-content-center fs-12 text-truncate">
+                    <!-- <a href="#" class="text-gray-100 text-truncate">Hip Hop</a> -->
+                    <div class="d-flex flex-row text-truncate column-gap-1">
+                        <a href="#" class="text-gray-100">Hip Hop,</a>
+                        <a href="#" class="text-gray-100 text-truncate">Boom Bap</a>
+                    </div>
+                    <div class="d-flex flex-row text-truncate column-gap-1">
+                        <a href="#" class="text-gray-100">Happy,</a>
+                        <a href="#" class="text-gray-100 text-truncate">Laid Back</a>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-end">
+                    <button class="btn btn-link text-gray-100 fs-14" data-bs-toggle="offcanvas" data-bs-target="#offcanvasQuote">
+                        GET A QUOTE
+                    </button>
+                    <button class="btn btn-tooltip" data-bs-toggle="tooltip" data-bs-title="Copy link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.9954 1.99658C16.3384 1.99658 15.688 2.12606 15.0811 2.37762C14.4745 2.62911 13.9233 2.99767 13.4592 3.46225L13.4588 3.46264L9.57079 7.35062C9.10603 7.81487 8.73733 8.36617 8.48577 8.97301C8.23422 9.57984 8.10474 10.2303 8.10474 10.8872C8.10474 11.5441 8.23422 12.1946 8.48577 12.8014C8.73733 13.4083 9.10603 13.9596 9.57079 14.4238L10.9842 13.0088C10.7054 12.7303 10.4842 12.3996 10.3333 12.0356C10.1824 11.6715 10.1047 11.2813 10.1047 10.8872C10.1047 10.4931 10.1824 10.1029 10.3333 9.73889C10.4842 9.37485 10.7054 9.04412 10.9842 8.76562L10.9846 8.76523L14.8734 4.87646L14.8738 4.87607C15.1523 4.59726 15.483 4.37607 15.847 4.22517C16.2111 4.07426 16.6013 3.99658 16.9954 3.99658C17.3894 3.99658 17.7796 4.07426 18.1437 4.22517C18.5077 4.37607 18.8385 4.59726 19.117 4.87607L19.8245 4.16935L19.1177 4.87686C19.3965 5.15536 19.6177 5.48608 19.7686 5.85012C19.9195 6.21416 19.9972 6.60438 19.9972 6.99846C19.9972 7.39254 19.9195 7.78275 19.7686 8.14679C19.6179 8.51053 19.3969 8.84101 19.1184 9.11937L19.1177 9.12006L17.1698 11.058L18.5804 12.4759L20.5297 10.5365L20.5312 10.5351C20.9959 10.0708 21.3646 9.51951 21.6162 8.91267C21.8677 8.30584 21.9972 7.65537 21.9972 6.99846C21.9972 6.34155 21.8677 5.69108 21.6162 5.08424C21.3647 4.47758 20.9961 3.92642 20.5316 3.46225C20.0674 2.99767 19.5162 2.62911 18.9096 2.37762C18.3027 2.12606 17.6523 1.99658 16.9954 1.99658ZM15.508 11.1924C15.2565 10.5855 14.8878 10.0342 14.423 9.56997L13.0096 10.985C13.2884 11.2635 13.5096 11.5942 13.6605 11.9582C13.8114 12.3223 13.8891 12.7125 13.8891 13.1066C13.8891 13.5007 13.8114 13.8909 13.6605 14.2549C13.5096 14.619 13.2884 14.9497 13.0096 15.2282L13.0092 15.2286L9.12043 19.1173L9.12004 19.1177C8.84154 19.3965 8.51082 19.6177 8.14678 19.7686C7.78274 19.9195 7.39252 19.9972 6.99845 19.9972C6.60437 19.9972 6.21416 19.9195 5.85012 19.7686C5.48608 19.6177 5.15535 19.3965 4.87685 19.1177L4.16935 19.8244L4.87607 19.1169C4.59726 18.8384 4.37607 18.5077 4.22517 18.1437C4.07426 17.7796 3.99658 17.3894 3.99658 16.9953C3.99658 16.6013 4.07426 16.211 4.22517 15.847C4.37596 15.4832 4.59693 15.1527 4.87545 14.8744L4.87607 14.8737L6.82402 12.9358L5.41344 11.5179L3.46406 13.4573L3.46264 13.4587C2.99788 13.923 2.62918 14.4743 2.37762 15.0811C2.12606 15.688 1.99658 16.3384 1.99658 16.9953C1.99658 17.6523 2.12606 18.3027 2.37762 18.9096C2.6291 19.5162 2.99767 20.0674 3.46225 20.5315C3.92641 20.9961 4.47757 21.3647 5.08424 21.6162C5.69107 21.8677 6.34154 21.9972 6.99845 21.9972C7.65536 21.9972 8.30583 21.8677 8.91266 21.6162C9.51932 21.3647 10.0705 20.9961 10.5346 20.5315L10.535 20.5312L14.423 16.6432V9.56997L14.4234 16.6428C14.888 16.1786 15.2565 15.6275 15.508 15.0208C15.7596 14.414 15.8891 13.7635 15.8891 13.1066C15.8891 12.4497 15.7596 11.7992 15.508 11.1924Z"></path></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="track-item text-gray-100" data-track="../assets/media/dancing.mp3">
+                <div class="d-flex align-items-center column-gap-lg-3">
+                    <div class="btn-action" role="button">
+                        <div class="btn-play bg-gray-900" data-action="play">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M20 12L8 5V19L20 12Z"></path></svg>
+                        </div>
+                        <div class="btn-pause bg-white" data-action="pause">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 5H7V19H10V5ZM17 5H14V19H17V5Z"></path></svg>
+                        </div>
+                        <img src="./assets/images/track-cover-3.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="track-info d-grid">
+                        <a href="#" class="title fs-14 fw-semibold text-truncate text-gray-100">Dancing with the Devil</a>
+                        <div class="desc fs-12 text-truncate">
+                            <span>Bonkers Beat Club</span>
+                        </div>
+                    </div>
+                    <div class="track-case d-flex ms-auto">
+                        <button class="btn p-0 text-gray-50" data-bs-toggle="tooltip" data-bs-title="Has vocals">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.3431 4 9 5.34315 9 7V11C9 12.6569 10.3431 14 12 14C13.6569 14 15 12.6569 15 11V7C15 5.34315 13.6569 4 12 4ZM11 16.917V19H8V21H16V19H13V16.917C15.8377 16.441 18 13.973 18 11H16C16 13.2091 14.2091 15 12 15C9.79086 15 8 13.2091 8 11H6C6 13.973 8.16229 16.441 11 16.917Z"></path></svg>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="d-none d-md-flex align-items-center column-gap-3">
+                    <div class="waveform flex-grow-1"></div>
+                    <button class="btn btn-tooltip" data-bs-toggle="tooltip" data-bs-title="Find similar">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 3H3v18h5v2H1V1h7v2Zm13 0h-5V1h7v22h-7v-2h5V3Zm-10.55 7.72-1.25 3a1.33 1.33 0 0 1-2.42.08L5.38 11H4V9h1.8c.5 0 .96.29 1.19.74l.93 1.86 1.33-3.2a1.33 1.33 0 0 1 2.48.04l1.82 4.84 1.23-2.96a1.33 1.33 0 0 1 2.45-.04L18.48 13H20v2h-1.95c-.52 0-1-.3-1.21-.78l-.8-1.72-1.3 3.1a1.33 1.33 0 0 1-2.47-.04l-1.82-4.84Z"></path></svg>
+                    </button>
+                </div>
+                <div class="d-none d-sm-flex flex-column justify-content-center fs-12">
+                    <span>3:18</span>
+                    <span>100 BPM</span>
+                </div>
+                <div class="d-none d-lg-flex flex-column justify-content-center fs-12 text-truncate">
+                    <!-- <a href="#" class="text-gray-100 text-truncate">Hip Hop</a> -->
+                    <div class="d-flex flex-row text-truncate column-gap-1">
+                        <a href="#" class="text-gray-100">Hip Hop,</a>
+                        <a href="#" class="text-gray-100 text-truncate">Boom Bap</a>
+                    </div>
+                    <div class="d-flex flex-row text-truncate column-gap-1">
+                        <a href="#" class="text-gray-100">Happy,</a>
+                        <a href="#" class="text-gray-100 text-truncate">Laid Back</a>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-end">
+                    <button class="btn btn-link text-gray-100 fs-14" data-bs-toggle="offcanvas" data-bs-target="#offcanvasQuote">
+                        GET A QUOTE
+                    </button>
+                    <button class="btn btn-tooltip" data-bs-toggle="tooltip" data-bs-title="Copy link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.9954 1.99658C16.3384 1.99658 15.688 2.12606 15.0811 2.37762C14.4745 2.62911 13.9233 2.99767 13.4592 3.46225L13.4588 3.46264L9.57079 7.35062C9.10603 7.81487 8.73733 8.36617 8.48577 8.97301C8.23422 9.57984 8.10474 10.2303 8.10474 10.8872C8.10474 11.5441 8.23422 12.1946 8.48577 12.8014C8.73733 13.4083 9.10603 13.9596 9.57079 14.4238L10.9842 13.0088C10.7054 12.7303 10.4842 12.3996 10.3333 12.0356C10.1824 11.6715 10.1047 11.2813 10.1047 10.8872C10.1047 10.4931 10.1824 10.1029 10.3333 9.73889C10.4842 9.37485 10.7054 9.04412 10.9842 8.76562L10.9846 8.76523L14.8734 4.87646L14.8738 4.87607C15.1523 4.59726 15.483 4.37607 15.847 4.22517C16.2111 4.07426 16.6013 3.99658 16.9954 3.99658C17.3894 3.99658 17.7796 4.07426 18.1437 4.22517C18.5077 4.37607 18.8385 4.59726 19.117 4.87607L19.8245 4.16935L19.1177 4.87686C19.3965 5.15536 19.6177 5.48608 19.7686 5.85012C19.9195 6.21416 19.9972 6.60438 19.9972 6.99846C19.9972 7.39254 19.9195 7.78275 19.7686 8.14679C19.6179 8.51053 19.3969 8.84101 19.1184 9.11937L19.1177 9.12006L17.1698 11.058L18.5804 12.4759L20.5297 10.5365L20.5312 10.5351C20.9959 10.0708 21.3646 9.51951 21.6162 8.91267C21.8677 8.30584 21.9972 7.65537 21.9972 6.99846C21.9972 6.34155 21.8677 5.69108 21.6162 5.08424C21.3647 4.47758 20.9961 3.92642 20.5316 3.46225C20.0674 2.99767 19.5162 2.62911 18.9096 2.37762C18.3027 2.12606 17.6523 1.99658 16.9954 1.99658ZM15.508 11.1924C15.2565 10.5855 14.8878 10.0342 14.423 9.56997L13.0096 10.985C13.2884 11.2635 13.5096 11.5942 13.6605 11.9582C13.8114 12.3223 13.8891 12.7125 13.8891 13.1066C13.8891 13.5007 13.8114 13.8909 13.6605 14.2549C13.5096 14.619 13.2884 14.9497 13.0096 15.2282L13.0092 15.2286L9.12043 19.1173L9.12004 19.1177C8.84154 19.3965 8.51082 19.6177 8.14678 19.7686C7.78274 19.9195 7.39252 19.9972 6.99845 19.9972C6.60437 19.9972 6.21416 19.9195 5.85012 19.7686C5.48608 19.6177 5.15535 19.3965 4.87685 19.1177L4.16935 19.8244L4.87607 19.1169C4.59726 18.8384 4.37607 18.5077 4.22517 18.1437C4.07426 17.7796 3.99658 17.3894 3.99658 16.9953C3.99658 16.6013 4.07426 16.211 4.22517 15.847C4.37596 15.4832 4.59693 15.1527 4.87545 14.8744L4.87607 14.8737L6.82402 12.9358L5.41344 11.5179L3.46406 13.4573L3.46264 13.4587C2.99788 13.923 2.62918 14.4743 2.37762 15.0811C2.12606 15.688 1.99658 16.3384 1.99658 16.9953C1.99658 17.6523 2.12606 18.3027 2.37762 18.9096C2.6291 19.5162 2.99767 20.0674 3.46225 20.5315C3.92641 20.9961 4.47757 21.3647 5.08424 21.6162C5.69107 21.8677 6.34154 21.9972 6.99845 21.9972C7.65536 21.9972 8.30583 21.8677 8.91266 21.6162C9.51932 21.3647 10.0705 20.9961 10.5346 20.5315L10.535 20.5312L14.423 16.6432V9.56997L14.4234 16.6428C14.888 16.1786 15.2565 15.6275 15.508 15.0208C15.7596 14.414 15.8891 13.7635 15.8891 13.1066C15.8891 12.4497 15.7596 11.7992 15.508 11.1924Z"></path></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="track-item text-gray-100" data-track="../assets/media/dancing.mp3">
+                <div class="d-flex align-items-center column-gap-lg-3">
+                    <div class="btn-action" role="button">
+                        <div class="btn-play bg-gray-900" data-action="play">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M20 12L8 5V19L20 12Z"></path></svg>
+                        </div>
+                        <div class="btn-pause bg-white" data-action="pause">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 5H7V19H10V5ZM17 5H14V19H17V5Z"></path></svg>
+                        </div>
+                        <img src="./assets/images/track-cover-3.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="track-info d-grid">
+                        <a href="#" class="title fs-14 fw-semibold text-truncate text-gray-100">Dancing with the Devil</a>
+                        <div class="desc fs-12 text-truncate">
+                            <span>Bonkers Beat Club</span>
+                        </div>
+                    </div>
+                    <div class="track-case d-flex ms-auto">
+                        <button class="btn p-0 text-gray-50" data-bs-toggle="tooltip" data-bs-title="Has vocals">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.3431 4 9 5.34315 9 7V11C9 12.6569 10.3431 14 12 14C13.6569 14 15 12.6569 15 11V7C15 5.34315 13.6569 4 12 4ZM11 16.917V19H8V21H16V19H13V16.917C15.8377 16.441 18 13.973 18 11H16C16 13.2091 14.2091 15 12 15C9.79086 15 8 13.2091 8 11H6C6 13.973 8.16229 16.441 11 16.917Z"></path></svg>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="d-none d-md-flex align-items-center column-gap-3">
+                    <div class="waveform flex-grow-1"></div>
+                    <button class="btn btn-tooltip" data-bs-toggle="tooltip" data-bs-title="Find similar">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 3H3v18h5v2H1V1h7v2Zm13 0h-5V1h7v22h-7v-2h5V3Zm-10.55 7.72-1.25 3a1.33 1.33 0 0 1-2.42.08L5.38 11H4V9h1.8c.5 0 .96.29 1.19.74l.93 1.86 1.33-3.2a1.33 1.33 0 0 1 2.48.04l1.82 4.84 1.23-2.96a1.33 1.33 0 0 1 2.45-.04L18.48 13H20v2h-1.95c-.52 0-1-.3-1.21-.78l-.8-1.72-1.3 3.1a1.33 1.33 0 0 1-2.47-.04l-1.82-4.84Z"></path></svg>
+                    </button>
+                </div>
+                <div class="d-none d-sm-flex flex-column justify-content-center fs-12">
+                    <span>3:18</span>
+                    <span>100 BPM</span>
+                </div>
+                <div class="d-none d-lg-flex flex-column justify-content-center fs-12 text-truncate">
+                    <!-- <a href="#" class="text-gray-100 text-truncate">Hip Hop</a> -->
+                    <div class="d-flex flex-row text-truncate column-gap-1">
+                        <a href="#" class="text-gray-100">Hip Hop,</a>
+                        <a href="#" class="text-gray-100 text-truncate">Boom Bap</a>
+                    </div>
+                    <div class="d-flex flex-row text-truncate column-gap-1">
+                        <a href="#" class="text-gray-100">Happy,</a>
+                        <a href="#" class="text-gray-100 text-truncate">Laid Back</a>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-end">
+                    <button class="btn btn-link text-gray-100 fs-14" data-bs-toggle="offcanvas" data-bs-target="#offcanvasQuote">
+                        GET A QUOTE
+                    </button>
+                    <button class="btn btn-tooltip" data-bs-toggle="tooltip" data-bs-title="Copy link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.9954 1.99658C16.3384 1.99658 15.688 2.12606 15.0811 2.37762C14.4745 2.62911 13.9233 2.99767 13.4592 3.46225L13.4588 3.46264L9.57079 7.35062C9.10603 7.81487 8.73733 8.36617 8.48577 8.97301C8.23422 9.57984 8.10474 10.2303 8.10474 10.8872C8.10474 11.5441 8.23422 12.1946 8.48577 12.8014C8.73733 13.4083 9.10603 13.9596 9.57079 14.4238L10.9842 13.0088C10.7054 12.7303 10.4842 12.3996 10.3333 12.0356C10.1824 11.6715 10.1047 11.2813 10.1047 10.8872C10.1047 10.4931 10.1824 10.1029 10.3333 9.73889C10.4842 9.37485 10.7054 9.04412 10.9842 8.76562L10.9846 8.76523L14.8734 4.87646L14.8738 4.87607C15.1523 4.59726 15.483 4.37607 15.847 4.22517C16.2111 4.07426 16.6013 3.99658 16.9954 3.99658C17.3894 3.99658 17.7796 4.07426 18.1437 4.22517C18.5077 4.37607 18.8385 4.59726 19.117 4.87607L19.8245 4.16935L19.1177 4.87686C19.3965 5.15536 19.6177 5.48608 19.7686 5.85012C19.9195 6.21416 19.9972 6.60438 19.9972 6.99846C19.9972 7.39254 19.9195 7.78275 19.7686 8.14679C19.6179 8.51053 19.3969 8.84101 19.1184 9.11937L19.1177 9.12006L17.1698 11.058L18.5804 12.4759L20.5297 10.5365L20.5312 10.5351C20.9959 10.0708 21.3646 9.51951 21.6162 8.91267C21.8677 8.30584 21.9972 7.65537 21.9972 6.99846C21.9972 6.34155 21.8677 5.69108 21.6162 5.08424C21.3647 4.47758 20.9961 3.92642 20.5316 3.46225C20.0674 2.99767 19.5162 2.62911 18.9096 2.37762C18.3027 2.12606 17.6523 1.99658 16.9954 1.99658ZM15.508 11.1924C15.2565 10.5855 14.8878 10.0342 14.423 9.56997L13.0096 10.985C13.2884 11.2635 13.5096 11.5942 13.6605 11.9582C13.8114 12.3223 13.8891 12.7125 13.8891 13.1066C13.8891 13.5007 13.8114 13.8909 13.6605 14.2549C13.5096 14.619 13.2884 14.9497 13.0096 15.2282L13.0092 15.2286L9.12043 19.1173L9.12004 19.1177C8.84154 19.3965 8.51082 19.6177 8.14678 19.7686C7.78274 19.9195 7.39252 19.9972 6.99845 19.9972C6.60437 19.9972 6.21416 19.9195 5.85012 19.7686C5.48608 19.6177 5.15535 19.3965 4.87685 19.1177L4.16935 19.8244L4.87607 19.1169C4.59726 18.8384 4.37607 18.5077 4.22517 18.1437C4.07426 17.7796 3.99658 17.3894 3.99658 16.9953C3.99658 16.6013 4.07426 16.211 4.22517 15.847C4.37596 15.4832 4.59693 15.1527 4.87545 14.8744L4.87607 14.8737L6.82402 12.9358L5.41344 11.5179L3.46406 13.4573L3.46264 13.4587C2.99788 13.923 2.62918 14.4743 2.37762 15.0811C2.12606 15.688 1.99658 16.3384 1.99658 16.9953C1.99658 17.6523 2.12606 18.3027 2.37762 18.9096C2.6291 19.5162 2.99767 20.0674 3.46225 20.5315C3.92641 20.9961 4.47757 21.3647 5.08424 21.6162C5.69107 21.8677 6.34154 21.9972 6.99845 21.9972C7.65536 21.9972 8.30583 21.8677 8.91266 21.6162C9.51932 21.3647 10.0705 20.9961 10.5346 20.5315L10.535 20.5312L14.423 16.6432V9.56997L14.4234 16.6428C14.888 16.1786 15.2565 15.6275 15.508 15.0208C15.7596 14.414 15.8891 13.7635 15.8891 13.1066C15.8891 12.4497 15.7596 11.7992 15.508 11.1924Z"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="load-more text-center">
+            <button class="btn btn-light rounded-5px fs-14 fw-medium">Load more</button>
+        </div>
+    </section>
+
+    <!-- tracklist end -->
+
+    <!-- footer start -->
+    <footer class="footer py-47">
+        <div class="container-xxl px-xxl-56">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-sm-between  row-gap-2">
+                <p class="mb-0 fs-14 fw-semibold">
+                    Copyright © HAUL
+                </p>
+                <ul class="list-unstyled d-flex align-items-center column-gap-2 mb-0">
+                    <li>
+                        <a href="#" class="btn btn-tooltip" data-bs-toggle="tooltip" data-bs-title="Spotify">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M11.9999 2C6.47724 2 2 6.47723 2 12.0001C2 17.5231 6.47724 22 11.9999 22C17.5232 22 22 17.5231 22 12.0001C22 6.47759 17.5232 2.00048 11.9998 2.00048L11.9999 2ZM16.5858 16.423C16.4067 16.7167 16.0222 16.8099 15.7285 16.6295C13.3806 15.1954 10.4249 14.8706 6.94403 15.6659C6.6086 15.7423 6.27424 15.5321 6.19782 15.1966C6.12104 14.861 6.33037 14.5266 6.66663 14.4502C10.4759 13.5799 13.7434 13.9546 16.3793 15.5656C16.673 15.7459 16.7662 16.1292 16.5858 16.423ZM17.8098 13.7001C17.5841 14.0669 17.1041 14.1827 16.7375 13.957C14.0495 12.3048 9.95214 11.8263 6.77279 12.7914C6.36046 12.916 5.92496 12.6836 5.79982 12.272C5.67563 11.8596 5.90812 11.425 6.31974 11.2996C9.95142 10.1976 14.4663 10.7314 17.5531 12.6283C17.9197 12.854 18.0355 13.334 17.8098 13.7002V13.7001ZM17.9149 10.8647C14.692 8.95032 9.37454 8.7743 6.29741 9.70825C5.80328 9.85811 5.28073 9.57916 5.13099 9.08502C4.98125 8.59064 5.25995 8.06844 5.75444 7.91821C9.28678 6.84587 15.1589 7.05305 18.8695 9.2559C19.3149 9.51969 19.4606 10.0937 19.1967 10.5376C18.934 10.982 18.3584 11.1286 17.9154 10.8647H17.9149Z"></path></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-tooltip" data-bs-toggle="tooltip" data-bs-title="Youtube">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9806 4.16329C15.6762 3.945 8.3183 3.94614 5.0194 4.16329C1.4477 4.39986 1.0264 6.49247 1 12C1.0264 17.4972 1.4433 19.6001 5.0194 19.8367C8.3194 20.0539 15.6762 20.055 18.9806 19.8367C22.5523 19.6001 22.9736 17.5075 23 12C22.9736 6.50276 22.5567 4.39986 18.9806 4.16329ZM8.7 8.57151L16.5837 11.9954L8.7 15.5555V8.57151Z"></path></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-tooltip" data-bs-toggle="tooltip" data-bs-title="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 4C16.7422 4 16 4.74225 16 5.5C16 6.25775 16.7422 7 17.5 7C18.2578 7 19 6.25775 19 5.5C19 4.74225 18.2578 4 17.5 4ZM11.5 15C9.37423 15.0351 8 13.6049 8 11.5C8 9.37193 9.5 8 11.5 8C13.5 8 15 9.5 15 11.5C15 13.5 13.5791 14.9656 11.5 15ZM11.5 6C8.5 6 6 8.5 6 11.4989C6 14.4979 8.5 17 11.5 17C14.5 17 17 14.5 17 11.5C17 8.5 14.5 6 11.5 6ZM11.5 2C14.5938 2 14.9612 2.01161 16.1824 2.06756C19.3227 2.21006 20.7899 3.7005 20.9324 6.81756C20.9894 8.03883 21 8.40617 21 11.5C21 14.5949 20.9884 14.9612 20.9324 16.1824C20.7899 19.2963 19.3269 20.7899 16.1824 20.9324C14.9612 20.9873 14.5959 21 11.5 21C8.40617 21 8.03883 20.9873 6.81756 20.9324C3.66989 20.7889 2.21006 19.2921 2.06756 16.1814C2.01161 14.9601 2 14.5938 2 11.4989C2 8.40511 2.01267 8.03883 2.06756 6.8165C2.21111 3.7005 3.67411 2.21111 6.81756 2.0665C8.03989 2.01161 8.40617 2 11.5 2Z"></path></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-tooltip" data-bs-toggle="tooltip" data-bs-title="Tiktok">
+                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M20.9972 10.0916C20.8348 10.1075 20.6719 10.1158 20.5088 10.1166C19.6282 10.1167 18.7614 9.89606 17.9867 9.47456C17.212 9.05306 16.5537 8.44397 16.0714 7.70227V15.9236C16.0714 17.1254 15.7174 18.3002 15.0542 19.2995C14.391 20.2987 13.4483 21.0776 12.3454 21.5375C11.2426 21.9974 10.029 22.1177 8.85818 21.8832C7.68737 21.6488 6.61192 21.0701 5.76781 20.2203C4.92371 19.3705 4.34887 18.2878 4.11598 17.1091C3.88309 15.9303 4.00261 14.7086 4.45944 13.5983C4.91627 12.488 5.68988 11.539 6.68244 10.8713C7.675 10.2036 8.84194 9.84722 10.0357 9.84722C10.1617 9.84722 10.2848 9.85862 10.4087 9.86646V12.8608C10.2848 12.8459 10.1631 12.8231 10.0357 12.8231C9.21869 12.8231 8.43516 13.1498 7.85745 13.7314C7.27975 14.313 6.9552 15.1018 6.9552 15.9243C6.9552 16.7468 7.27975 17.5356 7.85745 18.1172C8.43516 18.6988 9.21869 19.0256 10.0357 19.0256C11.7373 19.0256 13.24 17.6759 13.24 15.9628L13.2698 2H16.1153C16.2453 3.2447 16.8057 4.40379 17.6987 5.2746C18.5916 6.14541 19.7601 6.67252 21 6.76377V10.0916"></path></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-tooltip" data-bs-toggle="tooltip" data-bs-title="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M9 9H6V13H9V22H13V13H16L17 9H13V7.541C13 6.706 13.827 6.038 14.596 6.038H17V2H13.827C10.83 2 9 3.385 9 6.038V9Z"></path></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-tooltip" data-bs-toggle="tooltip" data-bs-title="X">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M13.9027 10.6832L21.3482 2H19.5838L13.119 9.53949L7.95547 2H2L9.8082 13.401L2 22.5067H3.76443L10.5915 14.5447L16.0445 22.5067H22L13.9023 10.6832H13.9027ZM11.4861 13.5015L10.695 12.3662L4.40018 3.33261H7.11025L12.1902 10.623L12.9813 11.7583L19.5847 21.2347H16.8746L11.4861 13.5019V13.5015Z"></path></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-tooltip" data-bs-toggle="tooltip" data-bs-title="Linkedin">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.33031 3C3.59583 3 3 3.57769 3 4.28939V19.711C3 20.4228 3.5959 21 4.33031 21H19.6697C20.4045 21 21 20.4227 21 19.7108V4.28939C21 3.57769 20.4045 3 19.6697 3H4.33031ZM8.46993 9.96004V18.0637H5.7764V9.96004H8.46993ZM8.64747 7.45389C8.64747 8.23155 8.06282 8.85382 7.12373 8.85382L7.12352 8.85375H7.10608C6.20207 8.85375 5.61764 8.23148 5.61764 7.45382C5.61764 6.65852 6.21972 6.05362 7.14159 6.05362C8.06282 6.05362 8.62989 6.65852 8.64747 7.45389ZM12.6542 18.0637H9.96084L9.96077 18.064C9.96077 18.064 9.99614 10.7205 9.96098 9.96032H12.6544V11.1074C13.0124 10.5553 13.6532 9.77006 15.0819 9.77006C16.854 9.77006 18.1826 10.9283 18.1826 13.4173V18.0637H15.4894V13.7289C15.4894 12.6394 15.0993 11.8964 14.125 11.8964C13.3807 11.8964 12.9375 12.3975 12.7429 12.8816C12.6717 13.0544 12.6542 13.2969 12.6542 13.5387V18.0637Z"></path></svg>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- bootstrap -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <!-- nice select -->
+    <script src="./assets/js/nice-select/nice-select2.js"></script>
+    <!-- nouislider -->
+    <script src="./assets/js/nouislider/nouislider.min.js"></script>
+    <!-- wavesurfer -->
+    <script src="./assets/js/wavesurfer/wavesurfer.min.js"></script>
+    <script src="./assets/js/wavesurfer/plugins/hover.min.js"></script>
+    
+    <!-- main -->
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

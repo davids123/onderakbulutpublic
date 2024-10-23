@@ -45,38 +45,80 @@ if (document.querySelector('select.select2')) {
 }
 
 
+// if (document.querySelector('#duration-range')) {
+//     var slider = document.getElementById('duration-range');
+
+//     noUiSlider.create(slider, {
+//         start: [2.07, 5.00],
+//         connect: true,
+//         margin: .2,
+//         range: {
+//             'min': 2.07,
+//             'max': 5.00
+//         }
+//     });
+
+//     // get slider start values
+//     var values = slider.noUiSlider.get();
+
+//     document.querySelector('#duration-range .noUi-handle-lower').innerHTML = values[0];
+//     document.querySelector('#duration-range .noUi-handle-upper').innerHTML = values[1];
+
+//     slider.noUiSlider.on('change', function (values, handle) {
+//         setParams('duration', values.join('-'));
+//         if (values[0] == 2.07 && values[1] == 5.00) {
+//             removeParams('duration');
+//             document.querySelector('[data-bs-target="#duration"').classList.remove('-selected');
+//         }
+//     });
+
+//     slider.noUiSlider.on('update', function (values, handle) {
+//         document.querySelector('#duration-range .noUi-handle-lower').innerHTML = values[0];
+//         document.querySelector('#duration-range .noUi-handle-upper').innerHTML = values[1];
+//     });
+// }
+
+
+
 if (document.querySelector('#duration-range')) {
     var slider = document.getElementById('duration-range');
 
     noUiSlider.create(slider, {
-        start: [2.07, 5.00],
+        start: [0.00, 5.00], // Range in minutes
         connect: true,
         margin: .2,
         range: {
-            'min': 2.07,
-            'max': 5.00
+            'min': 0.00, // 0 minutes
+            'max': 5.00  // 5 minutes
         }
     });
 
     // get slider start values
     var values = slider.noUiSlider.get();
-
-    document.querySelector('#duration-range .noUi-handle-lower').innerHTML = values[0];
-    document.querySelector('#duration-range .noUi-handle-upper').innerHTML = values[1];
+    document.querySelector('#duration-range .noUi-handle-lower').innerHTML = formatCustomTime(values[0] * 60); // Convert to seconds for formatting
+    document.querySelector('#duration-range .noUi-handle-upper').innerHTML = formatCustomTime(values[1] * 60); // Convert to seconds for formatting
 
     slider.noUiSlider.on('change', function (values, handle) {
         setParams('duration', values.join('-'));
-        if (values[0] == 2.07 && values[1] == 5.00) {
+        if (values[0] == 0.07 && values[1] == 5.00) {
             removeParams('duration');
             document.querySelector('[data-bs-target="#duration"').classList.remove('-selected');
         }
     });
 
     slider.noUiSlider.on('update', function (values, handle) {
-        document.querySelector('#duration-range .noUi-handle-lower').innerHTML = values[0];
-        document.querySelector('#duration-range .noUi-handle-upper').innerHTML = values[1];
+        document.querySelector('#duration-range .noUi-handle-lower').innerHTML = formatCustomTime(values[0] * 60); // Convert to seconds for formatting
+        document.querySelector('#duration-range .noUi-handle-upper').innerHTML = formatCustomTime(values[1] * 60); // Convert to seconds for formatting
     });
 }
+
+// Function to format time in MM:SS
+function formatCustomTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return minutes + ':' + (secs < 10 ? '0' + secs : secs); // Format like MM:SS
+}
+
 
 if (document.querySelector('#bpm-range')) {
     var slider = document.getElementById('bpm-range');
@@ -88,7 +130,7 @@ if (document.querySelector('#bpm-range')) {
         step: 1,
         range: {
             'min': 89,
-            'max': 182
+            'max': 185
         }
     });
 
@@ -100,7 +142,7 @@ if (document.querySelector('#bpm-range')) {
 
     slider.noUiSlider.on('change', function (values, handle) {
         setParams('bpm', values.join('-'));
-        if (values[0] == 89 && values[1] == 182) {
+        if (values[0] == 89 && values[1] == 185) {
             removeParams('bpm');
             document.querySelector('[data-bs-target="#bpm"').classList.remove('-selected');
         }

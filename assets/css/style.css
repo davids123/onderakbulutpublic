@@ -13,7 +13,7 @@ body {
 .font-helvetica {
     font-family: 'HelveticaNeue';
 }
-noUi-origin
+
 /* filter start */
 .filter-items button {
     color:var(--bs-gray-50);
@@ -393,10 +393,4 @@ section.login input::placeholder {
 
 .request-list li.-active .form-check-input:checked + label {
     color: var(--bs-midnight);
-}
-b {
-    font-size: 15px;
-}
-p.mb-0.fs-14.fw-semibold {
-    color: #aba4a4;
 }

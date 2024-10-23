@@ -322,7 +322,9 @@
                 </div>
                 <div class="user-actions d-flex gap-2 gap-md-3 gap-lg-4">     
                     <a href="mailto:hello@haul-agency.com" class="text-danger fw-semibold py-15 border-0">SUBSCRIPTION</a>           
-                    <a href="mailto:info@haul-agency.com" class="text-white fw-semibold py-15 border-0" role="button">GET A QUOTE</a>
+                    <button class="btn btn-link text-gray-100 fs-14 text-white fw-semibold py-15 border-0" data-bs-toggle="offcanvas" data-bs-target="#offcanvasQuote">
+                        <b>GET A QUOTE<b>
+                    </button>
                 </div>
             </div>
         </div>
@@ -338,13 +340,13 @@
                     LICENSE EXCLUSIVE MUSIC TODAY
                 </h1>
                 <div class="row gx-xl-100">
-                    <div class="col-lg-4">
+                       <div class="col-lg-4">
                         <p class="font-helvetica fs-lg-20 text-uppercase lh-lg-30">
-                            Get a <span class="text-decoration-underline">Personalized Quote</span> in 3 hours or take advantage of our flexible <span class="text-decoration-underline"> Annual/Monthly subscriptions</span> 
+                            Get a <span class="text-decoration-underline"> <a href="mailto:info@haul-agency.com" style="color: #c5c6c8; "> Personalized Quote </a> </span> in 3 hours or take advantage of our flexible <span class="text-decoration-underline"><a href="hello@haul-agency.com" style="color: #c5c6c8;"> Annual/Monthly subscriptions </a> </span> 
                         </p>
                     </div>
                     <div class="col-lg-8">
-                        <p class="font-helvetica fs-lg-20 lh-lg-30">
+                        <p class="font-helvetica fs-lg-20 lh-lg-30" style="text-align: right;">
                             Complete your audience experience and license original contemporary music exclusively for your project from our easy-to-use library. Select from compositions produced by industry experts according to tone, tempo or mood and ensure your work syncs with today’s cultural and marketing trends. 
                         </p>
                     </div>
@@ -381,6 +383,7 @@
                         <li><button class="btn btn-link py-10 px-0" data-bs-toggle="collapse" data-bs-target="#duration">Duration</button></li>
                         <li><button class="btn btn-link py-10 px-0" data-bs-toggle="collapse" data-bs-target="#bpm" >BPM</button></li>
                     </ul>
+                    
 
                     <div class="d-none d-lg-block">
                         <select class="select2">
@@ -777,9 +780,31 @@
                 </div>
             </div>
         </div>
-        <div class="load-more text-center">
-            <button class="btn btn-light rounded-5px fs-14 fw-medium">Load more</button>
+       <div class="load-more text-end">
+            <div class="nav-list">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination" >
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous" style="background-color: transparent;color: white;" >
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#" style="background-color: transparent;color: white;">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#" style="background-color: transparent;color: white;" >2</a></li>
+                      <li class="page-item"><a class="page-link" href="#" style="background-color: transparent;color: white;" >3</a></li>
+                      <li class="page-item"><a class="page-link" href="#" style="background-color: transparent;color: white;" >4</a></li>
+                    
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next" style="background-color: transparent;color: white;" >
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+            </div>
         </div>
+
+
     </section>
 
     <!-- tracklist end -->
@@ -788,9 +813,7 @@
     <footer class="footer py-47">
         <div class="container-xxl px-xxl-56">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-sm-between  row-gap-2">
-                <p class="mb-0 fs-14 fw-semibold">
-                    Copyright © HAUL
-                </p>
+                <a href="https://www.haul-agency.com/" style="color: #383B44;"><p class="mb-0 fs-14 fw-semibold" > Copyright © HAUL</p></a>
                 <ul class="list-unstyled d-flex align-items-center column-gap-2 mb-0">
                     <li>
                         <a href="#" class="btn btn-tooltip" data-bs-toggle="tooltip" data-bs-title="Spotify">

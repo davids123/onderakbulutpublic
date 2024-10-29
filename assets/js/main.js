@@ -79,6 +79,11 @@ if (document.querySelector('select.select2')) {
 // }
 
 
+function formatCustomTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return minutes + '.' + (secs < 10 ? '0' + secs : secs); // Format like MM.SS
+}
 
 if (document.querySelector('#duration-range')) {
     var slider = document.getElementById('duration-range');
@@ -86,98 +91,53 @@ if (document.querySelector('#duration-range')) {
     noUiSlider.create(slider, {
         start: [0.00, 5.00], // Range in minutes
         connect: true,
-        margin: .2,
+        margin: 0.2,
         range: {
             'min': 0.00, // 0 minutes
             'max': 5.00  // 5 minutes
         }
     });
 
-    // get slider start values
+    // Initial display values in MM.SS format
     var values = slider.noUiSlider.get();
-    document.querySelector('#duration-range .noUi-handle-lower').innerHTML = formatCustomTime(values[0] * 60); // Convert to seconds for formatting
-    document.querySelector('#duration-range .noUi-handle-upper').innerHTML = formatCustomTime(values[1] * 60); // Convert to seconds for formatting
+    const initialLowerFormatted = formatCustomTime(values[0] * 60);
+    const initialUpperFormatted = formatCustomTime(values[1] * 60);
+    
+    // Update display elements
+    document.querySelector('#duration-range .noUi-handle-lower').innerHTML = initialLowerFormatted;
+    document.querySelector('#duration-range .noUi-handle-upper').innerHTML = initialUpperFormatted;
 
+    // Update URL on slider change
     slider.noUiSlider.on('change', function (values, handle) {
-        setParams('duration', values.join('-'));
-        if (values[0] == 0.07 && values[1] == 5.00) {
-            removeParams('duration');
-            document.querySelector('[data-bs-target="#duration"').classList.remove('-selected');
+        const lowerValueInSeconds = values[0] * 60; // Convert lower value to seconds
+        const upperValueInSeconds = values[1] * 60; // Convert upper value to seconds
+        
+        // Format the time for display
+        const lowerFormatted = formatCustomTime(lowerValueInSeconds);
+        const upperFormatted = formatCustomTime(upperValueInSeconds);
+        
+        // Update URL parameters while maintaining the '.' format
+        if (values[0] === 0.07 && values[1] === 5.00) {
+            removeParams('duration'); // Clear the parameter from the URL
+        } else {
+            setParams('duration', `${lowerFormatted}-${upperFormatted}`); // Use formatted values with '.'
         }
+
+        // Update display elements to show the formatted value
+        document.querySelector('#duration-range .noUi-handle-lower').innerHTML = lowerFormatted;
+        document.querySelector('#duration-range .noUi-handle-upper').innerHTML = upperFormatted;
     });
 
+    // Update slider handle displays on update
     slider.noUiSlider.on('update', function (values, handle) {
-        document.querySelector('#duration-range .noUi-handle-lower').innerHTML = formatCustomTime(values[0] * 60); // Convert to seconds for formatting
-        document.querySelector('#duration-range .noUi-handle-upper').innerHTML = formatCustomTime(values[1] * 60); // Convert to seconds for formatting
+        const formattedValue = formatCustomTime(values[0] * 60); // Keep formatted as MM.SS
+        const formattedValue2 = formatCustomTime(values[1] * 60); // Keep formatted as MM.SS
+        
+        // Update both handles to reflect the same formatted value
+        document.querySelector('#duration-range .noUi-handle-lower').innerHTML = formattedValue;
+        document.querySelector('#duration-range .noUi-handle-upper').innerHTML = formattedValue2; // Same as lower
     });
 }
-
-// Function to format time in MM:SS
-function formatCustomTime(seconds) {
-    const minutes = Math.floor(seconds / 60);
-    const secs = Math.floor(seconds % 60);
-    return minutes + ':' + (secs < 10 ? '0' + secs : secs); // Format like MM:SS
-}
-
-
-if (document.querySelector('#bpm-range')) {
-    var slider = document.getElementById('bpm-range');
-
-    noUiSlider.create(slider, {
-        start: [89, 182],
-        connect: true,
-        margin: 4,
-        step: 1,
-        range: {
-            'min': 89,
-            'max': 185
-        }
-    });
-
-    // get slider start values
-    var values = slider.noUiSlider.get();
-
-    document.querySelector('#bpm-range .noUi-handle-lower').innerHTML = values[0];
-    document.querySelector('#bpm-range .noUi-handle-upper').innerHTML = values[1];
-
-    slider.noUiSlider.on('change', function (values, handle) {
-        setParams('bpm', values.join('-'));
-        if (values[0] == 89 && values[1] == 185) {
-            removeParams('bpm');
-            document.querySelector('[data-bs-target="#bpm"').classList.remove('-selected');
-        }
-    });
-    slider.noUiSlider.on('update', function (values, handle) {
-        document.querySelector('#bpm-range .noUi-handle-lower').innerHTML = Number(values[0]) + ' BPM';
-        document.querySelector('#bpm-range .noUi-handle-upper').innerHTML = Number(values[1]) + ' BPM';
-    });
-}
-
-// add filter
-if (document.querySelector('#genres')) {
-    document.querySelectorAll('#genres > ul li .btn').forEach((item) => {
-        item.addEventListener('click', function (e) {
-            addParams('genres', item.getAttribute('data-filter'));
-        });
-    });
-}
-
-if (document.querySelector('#moods')) {
-    document.querySelectorAll('#moods > ul li .btn').forEach((item) => {
-        item.addEventListener('click', function (e) {
-            addParams('moods', item.getAttribute('data-filter'));
-        });
-    });
-}
-
-if (document.querySelector('#vocals')) {
-    document.querySelectorAll('#vocals > ul li .btn').forEach((item) => {
-        item.addEventListener('click', function (e) {
-            addParams('vocals', item.getAttribute('data-filter'));
-        });
-    });
-}
-
 
 
 

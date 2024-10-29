@@ -13,7 +13,22 @@ body {
 .font-helvetica {
     font-family: 'HelveticaNeue';
 }
-noUi-origin
+
+.pagination-dark .page-item .page-link {
+    color: grey;
+    font-size: 15px;
+    font-weight: 300;
+    background-color:transparent;
+    border: none;
+  
+  
+    
+  }
+  .pagination-dark .page-item.disabled .page-link {
+    color: white;
+    background-color: #333;
+  
+  }
 /* filter start */
 .filter-items button {
     color:var(--bs-gray-50);
@@ -81,11 +96,20 @@ select {
 .nice-select:hover {
     background-color: var(--bs-black-100);
 }
+.col-lg-8 {
+    flex: 0 0 auto;
+    width: 56.666667%;  
+}
 
-
+.for-space {
+    gap: 40px;
+}
 .nice-select .nice-select-dropdown {
     background-color: var(--bs-black-100);   
     border-radius: 0;
+}
+p.font-helvetica.fs-lg-18.lh-lg-30.mx-4.fw-medium {
+    margin-bottom: 80px;
 }
 
 .nice-select .option:hover,
@@ -191,7 +215,7 @@ select {
 .track-item:hover {
     background-color: var(--bs-black-100);
 }
-
+/* 
 .tracklist .track-item:nth-last-child(4) {
     opacity: 0.9;
 }
@@ -206,7 +230,7 @@ select {
 .tracklist .track-item:nth-last-child(1) {
     pointer-events: none;
     opacity: 0.05;
-}
+} */
 
 .btn-action {
     width: 56px;
@@ -365,6 +389,17 @@ section.login input::placeholder {
     display: flex;
     flex-direction: column;
 }
+element.style {
+    text-align: left;
+}
+ .pagination-dark .page-item.active .page-link {
+    color: white;
+    background-color:  #333;
+    
+  }
+.fs-lg-20 {
+    font-size: 19px !important;
+}
 
 .step-form-item:not(.-active) {
     display: none;
@@ -400,3 +435,58 @@ b {
 p.mb-0.fs-14.fw-semibold {
     color: #aba4a4;
 }
+@media only screen and (max-width: 768px) {
+  .pagination-dark .page-item .page-link {
+    font-size: 10px;
+    padding: 9px;
+  }
+  .btn-action {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+}
+.btn-tooltip {
+    width: 30px;
+    height: 30px;
+
+}
+ul.list-unstyled {
+    column-gap: 0px !important;
+}
+.liceJnse{
+    width: 100%;
+}
+.footer{
+    padding: 0px !important;
+}
+.for-space {
+    gap: 10px;
+}
+}
+
+  @media  (max-width: 768px ) {
+
+    .logo img {
+        
+      width: 90px;
+      margin-bottom: 40px;
+      
+      }
+    
+  }
+   @media  (max-width: 768px ) {
+
+    .haul {
+        
+      display: none;
+      
+      }
+    
+  }
+  
+  .c:hover{
+  cursor: pointer;
+  }
+  .title{
+    color: white;
+  }
